@@ -1,4 +1,4 @@
-# CamEditor - Editor de Câmera atualizado para o open.mp
+# CamEditor - Editor de câmera atualizado para o open.mp
 
 ## Visão Geral
 O CamEditor é um filterscript que permite criar movimentos suaves de câmera diretamente no jogo. Esta ferramenta facilita a criação de sequências cinemáticas, cutscenes e intros de servidor sem a necessidade de softwares de edição externos.
