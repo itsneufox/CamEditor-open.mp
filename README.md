@@ -1,4 +1,4 @@
-# CamEditor - Camera Movement Tool for open.mp
+# CamEditor - Camera editor updated for open.mp
 
 ## Overview
 CamEditor is a filterscript that allows you to create smooth camera movements directly in-game. This tool makes it easy to design cinematic sequences, cutscenes, and server intros without needing external editing software.
