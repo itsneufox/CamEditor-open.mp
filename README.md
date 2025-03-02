@@ -66,4 +66,4 @@ If you encounter any issues or have suggestions for improvement, please create a
 
 ---
 
-*Note: This tool is designed for server developement. Use in production servers should be restricted to administrators only.*
+*Note: This tool is designed for server development. Use in production servers should be restricted to administrators only.*
