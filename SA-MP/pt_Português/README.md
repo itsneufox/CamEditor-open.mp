@@ -22,13 +22,13 @@ O filterscript está disponível em:
 4. Adicione `cameditor` ao seu arquivo de configuração JSON
 
 ## Comandos
-- `/cameditor` - Ativa a ferramenta de edição de câmera
-- `/closecameditor` - Sai do editor de câmera a qualquer momento
+- `/editorcamera` - Ativa a ferramenta de edição de câmera
+- `/fechareditorcamera` - Sai do editor de câmera a qualquer momento
 
 ## Guia de Uso
 
 ### Criando um Movimento de Câmera
-1. Digite `/cameditor` para iniciar a ferramenta
+1. Digite `/editorcamera` para iniciar a ferramenta
 2. Use as teclas W, A, S, D (ou as teclas de movimento configuradas) para navegar no espaço 3D
 3. Posicione sua câmera no ponto inicial desejado
 4. Pressione a tecla de Fogo (geralmente o botão esquerdo do mouse) para definir a posição inicial
