@@ -242,7 +242,7 @@ public OnPlayerKeyStateChange(playerid, KEY:newkeys, KEY:oldkeys)
                 if (IsReSettingStart[playerid] == true)
                 {
                     SendClientMessage(playerid, -1, "{8EFF8E}>{FFFFFF} Start point has been {8EFF8E}successfully re-set");
-                    ShowPlayerDialog(playerid, DIALOG_MENU, DIALOG_STYLE_LIST,"Camera Editor - Next Step?","Preview Camera Movement\nModify Start Point\nModify End Point\nAdjust Speed Settings\nSave to File","{8EFF8E}Confirm","{F58282}Cancel");
+                    ShowPlayerDialog(playerid, DIALOG_MENU, DIALOG_STYLE_LIST,"{FFFFFF}Camera Editor - Next Step?","{FFFFFF}Preview Camera Movement\nModify Start Point\nModify End Point\nAdjust Speed Settings\nSave to File","{8EFF8E}Confirm","{F58282}Cancel");
                     IsReSettingStart[playerid]      = false;
                     IsReSettingEnd[playerid]        = false;
                     SettingFirstLoc[playerid]       = false;
@@ -263,8 +263,8 @@ public OnPlayerKeyStateChange(playerid, KEY:newkeys, KEY:oldkeys)
                     string[512]
                 ;
 
-                format(string, sizeof(string), "Please enter the desired {F58282}movement{FFFFFF} duration in milliseconds\n\nCurrent movement speed: \t{F58282}%i milliseconds\n{FFFFFF}Current rotation speed: \t{F58282}%i milliseconds\n\n\n{CFCFCF}Note: {FFFFFF}1 second = 1000 milliseconds", coordInfo[playerid][MoveSpeed], coordInfo[playerid][RotSpeed]);
-                ShowPlayerDialog(playerid, DIALOG_MOVE_SPEED, DIALOG_STYLE_INPUT, "Movement Duration Settings", string,"{8EFF8E}Confirm","{F58282}Cancel");
+                format(string, sizeof(string), "{FFFFFF}Please enter the desired {F58282}movement{FFFFFF} duration in milliseconds\n\nCurrent movement speed: \t{F58282}%i milliseconds\n{FFFFFF}Current rotation speed: \t{F58282}%i milliseconds\n\n\n{CFCFCF}Note: {FFFFFF}1 second = 1000 milliseconds", coordInfo[playerid][MoveSpeed], coordInfo[playerid][RotSpeed]);
+                ShowPlayerDialog(playerid, DIALOG_MOVE_SPEED, DIALOG_STYLE_INPUT, "{FFFFFF}Movement Duration Settings", string,"{8EFF8E}Confirm","{F58282}Cancel");
                 GetPlayerCameraPos(playerid, fPX, fPY, fPZ);
                 GetPlayerCameraFrontVector(playerid, fVX, fVY, fVZ);
 
@@ -282,7 +282,7 @@ public OnPlayerKeyStateChange(playerid, KEY:newkeys, KEY:oldkeys)
                 if (IsReSettingEnd[playerid] == true)
                 {
                     SendClientMessage(playerid, -1, "{8EFF8E}>{FFFFFF} end point has been {8EFF8E}successfully re-set");
-                    ShowPlayerDialog(playerid, DIALOG_MENU, DIALOG_STYLE_LIST,"Camera Editor - Next Step?","Preview\nChange Start\nChange End\nChange Speed\nSave","{8EFF8E}Confirm","{F58282}Cancel");
+                    ShowPlayerDialog(playerid, DIALOG_MENU, DIALOG_STYLE_LIST,"{FFFFFF}Camera Editor - Next Step?","{FFFFFF}Preview\nChange Start\nChange End\nChange Speed\nSave","{8EFF8E}Confirm","{F58282}Cancel");
 
                     IsReSettingStart[playerid]      = false;
                     IsReSettingEnd[playerid]        = false;
@@ -400,11 +400,11 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                             string[512]
                         ;
                         format(string, sizeof(string), "{FFFFFF}Please enter the desired {F58282}camera movement{FFFFFF} duration in milliseconds\n\nCurrent movement speed: \t{F58282}%i milliseconds\n{FFFFFF}Current rotation speed: \t{F58282}%i milliseconds\n\n\n{F58282}Note: {FFFFFF}1 second = 1000 milliseconds", coordInfo[playerid][MoveSpeed], coordInfo[playerid][RotSpeed]);
-                        ShowPlayerDialog(playerid, DIALOG_MOVE_SPEED, DIALOG_STYLE_INPUT, "Movement Speed", string,"{8EFF8E}Confirm","{F58282}Cancel");
+                        ShowPlayerDialog(playerid, DIALOG_MOVE_SPEED, DIALOG_STYLE_INPUT, "{FFFFFF}Movement Speed", string,"{8EFF8E}Confirm","{F58282}Cancel");
                     }
                     case 4: //Export
                     {
-                        ShowPlayerDialog(playerid, DIALOG_EXPORTNAME, DIALOG_STYLE_INPUT, "Save Camera Movement","Enter a descriptive name for this camera movement","{8EFF8E}Save","{FFCC00}Back");
+                        ShowPlayerDialog(playerid, DIALOG_EXPORTNAME, DIALOG_STYLE_INPUT, "{FFFFFF}Save Camera Movement","{FFFFFF}Enter a descriptive name for this camera movement","{8EFF8E}Save","{FFCC00}Back");
                     }
                 }
             }
@@ -431,7 +431,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                         ;
 
                         format(string, sizeof(string), "{FFFFFF}Please enter the desired {F58282}rotation{FFFFFF} duration in milliseconds\n\nCurrent movement speed: \t{F58282}%i milliseconds\n{FFFFFF}Current rotation speed: \t{F58282}%i milliseconds\n\n\n{F58282}Note: {FFFFFF}1 second = 1000 milliseconds", coordInfo[playerid][MoveSpeed], coordInfo[playerid][RotSpeed]);
-                        ShowPlayerDialog(playerid, DIALOG_ROT_SPEED, DIALOG_STYLE_INPUT, "Rotation Speed", string,"{8EFF8E}Confirm","{F58282}Cancel");
+                        ShowPlayerDialog(playerid, DIALOG_ROT_SPEED, DIALOG_STYLE_INPUT, "{FFFFFF}Rotation Speed", string,"{8EFF8E}Confirm","{F58282}Cancel");
                         
                         IsReSettingStart[playerid] = false;
                         IsReSettingEnd[playerid]   = false;
@@ -443,7 +443,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                         ;
 
                         format(string, sizeof(string), "{FFFFFF}Please enter the desired {F58282}movement{FFFFFF} duration in milliseconds\n\nCurrent movement speed: \t{F58282}%i milliseconds\n{FFFFFF}Current rotation speed: \t{F58282}%i milliseconds\n{FF0000}NUMBERS ONLY\n\n{F58282}Note: {FFFFFF}1 second = 1000 milliseconds", coordInfo[playerid][MoveSpeed], coordInfo[playerid][RotSpeed]);
-                        ShowPlayerDialog(playerid, DIALOG_MOVE_SPEED, DIALOG_STYLE_INPUT, "Movement Speed", string,"{8EFF8E}Confirm","{F58282}Cancel");
+                        ShowPlayerDialog(playerid, DIALOG_MOVE_SPEED, DIALOG_STYLE_INPUT, "{FFFFFF}Movement Speed", string,"{8EFF8E}Confirm","{F58282}Cancel");
                     }
                 }
                 else
@@ -453,12 +453,12 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     ;
 
                     format(string, sizeof(string), "{FFFFFF}Please enter the desired {F58282}movement{FFFFFF} time in milliseconds\n\nCurrent movement speed: \t{F58282}%i milliseconds\n{FFFFFF}Current rotation speed: \t{F58282}%i milliseconds\n{FF0000}You need to enter a value\n\n{F58282}Note: {FFFFFF}1 second = 1000 milliseconds", coordInfo[playerid][MoveSpeed], coordInfo[playerid][RotSpeed]);
-                    ShowPlayerDialog(playerid, DIALOG_MOVE_SPEED, DIALOG_STYLE_INPUT, "Movement Speed", string,"{8EFF8E}Confirm","{F58282}Cancel");
+                    ShowPlayerDialog(playerid, DIALOG_MOVE_SPEED, DIALOG_STYLE_INPUT, "{FFFFFF}Movement Speed", string,"{8EFF8E}Confirm","{F58282}Cancel");
                 }
             }
             else
             {
-                ShowPlayerDialog(playerid, DIALOG_MENU, DIALOG_STYLE_LIST,"Camera Editor - Next Step?","Preview\nChange Start\nChange End\nChange Speed\nSave","{8EFF8E}Confirm","{F58282}Cancel");
+                ShowPlayerDialog(playerid, DIALOG_MENU, DIALOG_STYLE_LIST,"{FFFFFF}Camera Editor - Next Step?","{FFFFFF}Preview\nChange Start\nChange End\nChange Speed\nSave","{8EFF8E}Confirm","{F58282}Cancel");
             }
         }
         case DIALOG_ROT_SPEED:
@@ -471,7 +471,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     {
                         coordInfo[playerid][RotSpeed] = strval(inputtext);
 
-                        ShowPlayerDialog(playerid, DIALOG_MENU, DIALOG_STYLE_LIST,"Camera Editor - Next Step?","Preview\nChange Start\nChange End\nChange Speed\nSave","{8EFF8E}Confirm","{F58282}Cancel");
+                        ShowPlayerDialog(playerid, DIALOG_MENU, DIALOG_STYLE_LIST,"{FFFFFF}Camera Editor - Next Step?","{FFFFFF}Preview\nChange Start\nChange End\nChange Speed\nSave","{8EFF8E}Confirm","{F58282}Cancel");
 
                         IsReSettingStart[playerid] = false;
                         IsReSettingEnd[playerid]   = false;
@@ -483,7 +483,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                         ;
 
                         format(string, sizeof(string), "{FFFFFF}Please enter the desired {F58282}rotation{FFFFFF} time in milliseconds\n\nCurrent movement speed: \t{F58282}%i milliseconds\n{FFFFFF}Current rotation speed: \t{F58282}%i milliseconds\n{FF0000}NUMBERS ONLY!\n\n{F58282}Note: {FFFFFF}1 second = 1000 milliseconds", coordInfo[playerid][MoveSpeed], coordInfo[playerid][RotSpeed]);
-                        ShowPlayerDialog(playerid, DIALOG_ROT_SPEED, DIALOG_STYLE_INPUT, "Rotation Speed", string,"{8EFF8E}Confirm","{F58282}Cancel");
+                        ShowPlayerDialog(playerid, DIALOG_ROT_SPEED, DIALOG_STYLE_INPUT, "{FFFFFF}Rotation Speed", string,"{8EFF8E}Confirm","{F58282}Cancel");
                     }
                 }
                 else
@@ -493,7 +493,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     ;
                     
                     format(string, sizeof(string), "{FFFFFF}Please enter the desired {F58282}rotation{FFFFFF} time in milliseconds\n\nCurrent movement speed: \t{F58282}%i milliseconds\n{FFFFFF}Current rotation speed: \t{F58282}%i milliseconds\n{FF0000}You need to enter a value\n\n{F58282}Note: {FFFFFF}1 second = 1000 milliseconds", coordInfo[playerid][MoveSpeed], coordInfo[playerid][RotSpeed]);
-                    ShowPlayerDialog(playerid, DIALOG_ROT_SPEED, DIALOG_STYLE_INPUT, "Rotation Speed", string,"{8EFF8E}Confirm","{F58282}Cancel");
+                    ShowPlayerDialog(playerid, DIALOG_ROT_SPEED, DIALOG_STYLE_INPUT, "{FFFFFF}Rotation Speed", string,"{8EFF8E}Confirm","{F58282}Cancel");
                 }
             }
             else
@@ -503,7 +503,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 ;
 
                 format(string, sizeof(string), "{FFFFFF}Please enter the desired {F58282}movement{FFFFFF} time in milliseconds\n\nCurrent movement speed: \t{F58282}%i milliseconds\n{FFFFFF}Current rotation speed: \t{F58282}%i milliseconds\n\n\n{F58282}Note: {FFFFFF}1 second = 1000 milliseconds", coordInfo[playerid][MoveSpeed], coordInfo[playerid][RotSpeed]);
-                ShowPlayerDialog(playerid, DIALOG_MOVE_SPEED, DIALOG_STYLE_INPUT, "Movement Speed",string,"{8EFF8E}Confirm","{F58282}Cancel");
+                ShowPlayerDialog(playerid, DIALOG_MOVE_SPEED, DIALOG_STYLE_INPUT, "{FFFFFF}Movement Speed",string,"{8EFF8E}Confirm","{F58282}Cancel");
             }
         }
         case DIALOG_EXPORTNAME:
@@ -516,12 +516,12 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 }
                 else
                 {
-                    ShowPlayerDialog(playerid, DIALOG_EXPORTNAME, DIALOG_STYLE_INPUT, "Save movement","{FFFFFF}Enter a name for this camera movement\n{F58282}You need to enter text","{8EFF8E}Confirm","{F58282}Cancel");
+                    ShowPlayerDialog(playerid, DIALOG_EXPORTNAME, DIALOG_STYLE_INPUT, "{FFFFFF}Save movement","{FFFFFF}Enter a name for this camera movement\n{F58282}You need to enter text","{8EFF8E}Confirm","{F58282}Cancel");
                 }
             }
             else
             {
-                ShowPlayerDialog(playerid, DIALOG_MENU, DIALOG_STYLE_LIST,"Camera Editor - Next Step?","Preview\nChange Start\nChange End\nChange Speed\nSave","{8EFF8E}Confirm","{F58282}Cancel");
+                ShowPlayerDialog(playerid, DIALOG_MENU, DIALOG_STYLE_LIST,"{FFFFFF}Camera Editor - Next Step?","{FFFFFF}Preview\nChange Start\nChange End\nChange Speed\nSave","{8EFF8E}Confirm","{F58282}Cancel");
             }
         }
         case DIALOG_CLOSE_NEW:
@@ -552,7 +552,7 @@ public ShowPlayerMenu(playerid)
 
     IsCamMoving[playerid] = false;
 
-    ShowPlayerDialog(playerid, DIALOG_MENU, DIALOG_STYLE_LIST,"Camera Editor - Next Step?","Preview\nChange Start\nChange End\nChange Speed\nSave","{8EFF8E}Confirm","{F58282}Cancel");
+    ShowPlayerDialog(playerid, DIALOG_MENU, DIALOG_STYLE_LIST,"{FFFFFF}Camera Editor - Next Step?","{FFFFFF}Preview\nChange Start\nChange End\nChange Speed\nSave","{8EFF8E}Confirm","{F58282}Cancel");
 
     return true;
 }
@@ -609,7 +609,7 @@ public ExportMovement(playerid, inputtext[])
     ;
 
     format(myOutpString, sizeof(myOutpString), "{FFFFFF}Camera movement saved as {F58282}%s{FFFFFF} in the scriptfiles folder!\n\nWhat would you like to do next?", filename);
-    ShowPlayerDialog(playerid, DIALOG_CLOSE_NEW, DIALOG_STYLE_MSGBOX,"What next?",myOutpString,"{8EFF8E}Create New","{F58282}Exit Editor");
+    ShowPlayerDialog(playerid, DIALOG_CLOSE_NEW, DIALOG_STYLE_MSGBOX,"{FFFFFF}What next?",myOutpString,"{8EFF8E}Create New","{F58282}Exit Editor");
 }
  
 stock GetMoveDirectionFromKeys(updown, leftright)
